@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0D1117;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+code {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.page-1 {
+    height: 100vh;
+}
+
+.page-2 {
+    height: 100vh;
+}
+
+.page-3 {
+    height: 100vh;
+}
+
+.column {
+    float: left;
+    width: 120px;
+    padding: 5px;
+}
+
+.row {
+    background-color: #161B22;
+    padding: 65px;
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+  
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+footer {
+    text-align: center;
+    font-weight: 600;
+}
+
+.mailto {
+    color: #fff;
+    padding-bottom: 30px;
+}
+
+.mailto:hover {
+    text-decoration: none;
+}
+
+.center {
+    position: absolute;
+    left: 35%;
+}
+
+.type {
+    text-align: center;
+}
+
+
+
+.top-div {
+    height: 30vh;
+}
+
+.header-div {
+}
+
+.header {
+    margin-left: 100px;
+    font-size: 72px;
+    font-weight: 800;
+}
+
+.bottom-div {
+    position: absolute;
+    bottom: 0px;
+    height: 80px;
+    left: 50%;
+}
+
+.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+
+.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+}
