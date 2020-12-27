@@ -1,0 +1,20 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: brown;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.top-div {
+    background-color: rgb(47, 236, 0);
+    height: 20vh;
+}
+
+.footer-div {
+    background-color: blue;
+    height: 80vh;
+}

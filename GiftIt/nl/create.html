@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./create.css">
+    <script type="text/javascript" src="../index.js"></script>
+    <embed src="../assets/music/1.mp3" loop=false" hidden="true" autostart="true">
+    <script src="snow.js"></script>
+    <title>GiftIt</title>
+</head>
+<body>
+    <div>
+        <div class="container-center">
+            <div id="name" class="name-input-div">
+                <input class="name-input" type="text" placeholder="Typ hier je naam" onchange="createLink()" id="name-input">       
+            </div>
+            <div class="share">
+                <ul>
+                    <li><a class="social-item" href="#" id="whatsapp"><img class="whatsapp" src="../assets/icons/social/whatsapp.svg"></a></li>
+                    <li><a class="social-item" href="#" id="messenger"><img class="messenger" src="../assets/icons/social/facebook-messenger.svg"></a></li>
+                    <li><a class="social-item" href="#" id="mail"><img  class="mail" src="../assets/icons/social/mail.svg"></a></li>
+                    <li><a class="social-item" href="#" id="copy" onclick="copy()"><img  class="copy" src="../assets/icons/social/copy.svg"></a></li>
+                </ul>
+            </div>
+            <div class="outer">
+                <input type="hidden" class="copyField" id="copyField">
+            </div>
+        </div>
+        <footer class="footer">
+            <a class="copyright">&copy;Martijn Faber</a>
+        </footer>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyD3RLxFpdkJqJb08xLjEXSULnXgv2IasKA",
+    authDomain: "giftit-92728.firebaseapp.com",
+    projectId: "giftit-92728",
+    storageBucket: "giftit-92728.appspot.com",
+    messagingSenderId: "695877706727",
+    appId: "1:695877706727:web:45b57c00a27696023fd342",
+    measurementId: "G-892JSMMVYD"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</body>
+</html>

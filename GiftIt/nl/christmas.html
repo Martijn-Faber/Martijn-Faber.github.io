@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" id="og-title" content="GiftIt" />
+
+    <link rel="stylesheet" type="text/css" href="./christmas.css">
+    <script type="text/javascript" src="../index.js"></script>
+    <script type="text/javascript" src="./snow.js"></script>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myAudio").autoplay;
+          document.getElementById("demo").innerHTML = x;
+        }
+    </script>
+    <!-- <embed src="../assets/music/1.mp3" loop=false" hidden="true" autostart="true"> -->
+    
+    <title id="title">GiftIt</title>
+</head>
+<body onload="onload()">
+    <div class="top-div">
+        <a id="language-dutch" href="#" onclick="language_dutch()"><img class="language" src="../assets/languages/netherlands.svg"></a>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <h2 id="name" class="name">laden...</h2>
+                        <p class="greating">Wenst je een gelukkig</p>
+                    </div>
+                </div>
+                <dv class="parent-currentyear">
+                    <h1 id="currentyear" class="shadow grad pulsate currentyear"><img class="loader" src="../assets/candycaneloader.gif"></h1>
+                </dv>
+            </div>
+        </div>
+    </div>
+    <div class="footer-div">
+        <div class="create-div">
+            <button class="create-button" onclick="document.location='./create.html'">Maak je eigen GiftIt</button>
+        </div>
+        <footer>
+            <p class="copyright">&copy;Martijn Faber</p>
+        </footer>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyD3RLxFpdkJqJb08xLjEXSULnXgv2IasKA",
+    authDomain: "giftit-92728.firebaseapp.com",
+    projectId: "giftit-92728",
+    storageBucket: "giftit-92728.appspot.com",
+    messagingSenderId: "695877706727",
+    appId: "1:695877706727:web:45b57c00a27696023fd342",
+    measurementId: "G-892JSMMVYD"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</body>
+</html>
