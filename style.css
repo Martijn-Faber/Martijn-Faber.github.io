@@ -1,14 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
 
+/* ////////////////////////////////////////////
+                Default styling
+   ////////////////////////////////////////////*/
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #0D1117;
+    background-color: #0d1117;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 75vw;
+    margin: auto;
 }
 
 code {
@@ -16,15 +26,318 @@ code {
     font-weight: 600;
 }
 
-.page-1 {
+img {
+    pointer-events: none;
+}
+
+.top {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    transition: padding 0.3s ease;
+}
+
+.top.sticky {
+    background: linear-gradient(rgba(13,17,23,1) 15%, rgba(13,17,23,0) 100%);
+}
+
+/* ////////////////////////////////////////////
+                placeholder styling
+   ////////////////////////////////////////////*/
+
+::placeholder {
+    color: #fff;
+    opacity: 100;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #fff;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #fff;
+}
+
+/* ////////////////////////////////////////////
+                scrollbar styling
+   ////////////////////////////////////////////*/
+
+::-webkit-resizer {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #161B22;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-color: #fff;
+    /* box-shadow: 0 -100vh 0 100vh #fff; */
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+.navigation {
+    float: right;
+}
+
+.nav-item {
+    background-color: #fff;
+    width: 10px;
+    border-radius: 50%;
+}
+
+
+/* ////////////////////////////////////////////
+                selection styling
+   ////////////////////////////////////////////*/
+
+::selection {
+    background-color: #161B22;
+    color: #fff;
+}
+
+/* ////////////////////////////////////////////
+                Navbar styling
+   ////////////////////////////////////////////*/
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    transition: padding 0.3s ease;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+    float: right;
+}
+
+.navbar .menu li a {
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 30px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: #fff;
+}
+
+/* on scroll */
+
+.navbar.sticky {
+    padding: 20px 0;
+    border-radius: 0px 0px 20px 20px;
+    /* background: linear-gradient(rgba(13,17,23,1) 55%, rgba(13,17,23,0) 100%); */
+    /* backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px); */
+}
+
+/* ////////////////////////////////////////////
+            social icons styling
+   ////////////////////////////////////////////*/
+
+.icon-bar {
+    position: fixed;
+    left: 75px;
+    bottom: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.github, .instagram, .mail, .dribble {
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.3s ease;
+}
+
+/* ////////////////////////////////////////////
+                home page styling
+   ////////////////////////////////////////////*/
+
+.home {
     height: 100vh;
 }
 
-.page-2 {
+.intro-text {
+    font-size: 72px;
+    font-weight: 800;
+}
+
+/* outlined text */
+
+.intro-text span {
+    color: transparent;
+    -webkit-text-stroke: 2.5px #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+.top-div {
+    height: 30vh;
+}
+
+.bottom-div {
+    position: absolute;
+    bottom: 0px;
+    height: 80px;
+    left: 50%;
+}
+
+/* mouse-scroll */
+
+.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2.5px solid #fff;
+    border-radius: 25px;
+    box-sizing: content-box;
+}
+
+.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+    animation-iteration-count: infinite;
+}
+
+/* .item-1 {
+	position: absolute;
+	display: block;
+	width: 25px;
+	height: 25px;
+	color: #fff;
+	animation: animate 20s linear infinite;
+	bottom: -150px;
+}
+
+.item-2 {
+    position: absolute;
+	display: block;
+	right: 10%;
+	width: 80px;
+    height: 80px;
+    -webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+    animation:spin 10s linear infinite;
+}
+
+.item-3 {
+    position: absolute;
+	display: block;
+    right: 50%;
+    top: 15%;
+	width: 80px;
+    height: 80px;
+    -webkit-animation:spin 8s linear infinite;
+    -moz-animation:spin 8s linear infinite;
+    animation:spin 8s linear infinite;
+}
+
+.item-4 {
+    position: absolute;
+	display: block;
+    left: 18%;
+    top: 60%;
+	width: 80px;
+    height: 80px;
+}
+
+.item-5 {
+    position: absolute;
+	display: block;
+    right: 20%;
+    top: 86%;
+	width: 80px;
+    height: 80px;
+    -webkit-animation:spin 15s linear infinite;
+    -moz-animation:spin 15s linear infinite;
+    animation:spin 15s linear infinite;
+}
+
+.item-6 {
+    position: absolute;
+	display: block;
+    left: 13%;
+    top: 15%;
+	width: 80px;
+    height: 80px;
+    -webkit-animation:spin 8s linear infinite;
+    -moz-animation:spin 8s linear infinite;
+    animation:spin 8s linear infinite;
+}
+
+.item-7 {
+    position: absolute;
+	display: block;
+    right: 2%;
+    top: 44%;
+	width: 80px;
+    height: 80px;
+    -webkit-animation:spin 8s linear infinite;
+    -moz-animation:spin 8s linear infinite;
+    animation:spin 8s linear infinite;
+}
+
+.item-8 {
+    position: absolute;
+	display: block;
+    right: 2%;
+    top: 44%;
+	width: 80px;
+    height: 80px;
+    -webkit-animation:spin 8s linear infinite;
+    -moz-animation:spin 8s linear infinite;
+    animation:spin 8s linear infinite;
+} */
+
+
+/* ////////////////////////////////////////////
+                about page styling
+   ////////////////////////////////////////////*/
+
+.about {
     height: 100vh;
 }
 
-.page-3 {
+/* ////////////////////////////////////////////
+                project page styling
+   ////////////////////////////////////////////*/
+
+.projects {
+    height: 100vh;
+}
+
+/* ////////////////////////////////////////////
+            skills & tools page styling
+   ////////////////////////////////////////////*/
+
+.skillstools {
     height: 100vh;
 }
 
@@ -41,81 +354,101 @@ code {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-  
+
+.left-div {
+    width: 33vw;
+}
+
 .row::after {
     content: "";
     clear: both;
     display: table;
 }
 
-footer {
-    text-align: center;
-    font-weight: 600;
-}
-
-.mailto {
-    color: #fff;
-    padding-bottom: 30px;
-}
-
-.mailto:hover {
-    text-decoration: none;
-}
-
 .center {
-    position: absolute;
-    left: 35%;
+    width: 40vw;
+    margin: auto;
 }
 
 .type {
     text-align: center;
 }
 
+/* ////////////////////////////////////////////
+            contact page styling
+   ////////////////////////////////////////////*/
 
-
-.top-div {
-    height: 30vh;
-}
-
-.header-div {
-}
 
 .header {
-    margin-left: 100px;
     font-size: 72px;
     font-weight: 800;
+    text-align: center;
+    padding-top: 50px;
 }
 
-.bottom-div {
-    position: absolute;
-    bottom: 0px;
-    height: 80px;
-    left: 50%;
-}
-
-.mousey {
-    width: 3px;
-    padding: 10px 15px;
-    height: 35px;
-    border: 2px solid #fff;
-    border-radius: 25px;
-    opacity: 0.75;
-    box-sizing: content-box;
-}
-
-.scroller {
-    width: 3px;
-    height: 10px;
-    border-radius: 25%;
-    background-color: #fff;
-    animation-name: scroll;
-    animation-duration: 2.2s;
-    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
-    animation-iteration-count: infinite;
-}
+/* ////////////////////////////////////////////
+                    keyframes
+   ////////////////////////////////////////////*/
 
 @keyframes scroll {
-    0% { opacity: 0; }
-    10% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(15px); opacity: 0;}
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes spin { 
+    100% { 
+        -moz-transform: rotate(360deg); 
+    } 
+}
+
+@-webkit-keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+    } 
+}
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+/* ////////////////////////////////////////////
+                media queries
+   ////////////////////////////////////////////*/
+
+@media only screen and (max-width:480px) {
+    .intro-text {
+        font-size: 40px !important;
+    }
+
+    .github, .instagram, .mail, .dribble {
+        display: none;
+    }
+    
+
+
+    code {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+}
+
+@media only screen and (max-width:1200px) {
+
 }

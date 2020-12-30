@@ -1,24 +1,69 @@
 $(document).ready(function(){
-    // Add smooth scrolling to all links
+
+    $(window).scroll(function(){
+    // sticky navbar on scroll script
+        if(this.scrollY > 20){
+            $('.top').addClass("sticky");
+        }else{
+            $('.top').removeClass("sticky");
+        }
+    });
+});
+
+
+
+$(document).ready(function(){
     $("a").on('click', function(event) {
-  
-      // Make sure this.hash has a value before overriding default behavior
       if (this.hash !== "") {
-        // Prevent default anchor click behavior
         event.preventDefault();
-  
-        // Store hash
         var hash = this.hash;
-  
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
         $('html, body').animate({
           scrollTop: $(hash).offset().top
         }, 800, function(){
-     
-          // Add hash (#) to URL when done scrolling (default click behavior)
           window.location.hash = hash;
         });
-      } // End if
+      }
     });
-  });
+});
+
+// var i = 0;
+// var txt = '<h1>Lorem ipsum dummy text blabla.<br>\n</h1>';
+// var speed = 50;
+
+// function typeWriter1() {
+//   if (i < txt.length) {
+//     document.getElementById("demo").innerHTML += txt.charAt(i);
+//     i++;
+//   } else {
+//     document.getElementById("demo").innerHTML = "‏‏‎ ‎‎"
+//     i = 0;
+
+//   }
+//   setTimeout(typeWriter1, speed);
+// }
+
+
+
+
+
+//  window.onload = function() {
+//   typeWriter1()
+
+// //   var element = document.getElementById('typewrite');
+// }
+
+
+// //   toRotate  = ['<h1> hallo ','regel twee'];
+
+// //   var period = element.getAttribute('data-period');
+// //   if (toRotate) {
+// //     new TxtType(element, toRotate, period);
+// //   }
+
+// //       // INJECT CSS
+// //   var css = document.createElement("style");
+// //   css.type = "text/css";
+// //   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+// //   document.body.appendChild(css);
+// // };
+
