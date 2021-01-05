@@ -3,51 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Martijns Portfolio">
+    <meta name="keywords" content="HTML, CSS, JavaScript, NodeJS, Portfolio, Programmer, Developer, Designer">
+    <meta name="author" content="Martijn Faber">
+    <meta name="copyright" content="auteursrechthebbende"/>
+
+    <meta property="og:title" content="Martijn Portfolio" />  
+    <meta property="og:type" content="Portfolio website" />
+    <meta property="og:url" content="https://martijndev.me/" />
+    <meta property="og:image" content="./assets/logo/Mdev(light).svg" />
+
+    <link rel="icon" href="./assets/favicon_lightmode.ico" id="light-scheme-icon">
+    <link rel="icon" href="./assets/favicon_darkmode.ico" id="dark-scheme-icon">
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="./style.css">
-    <title>Martijn | Portfolio</title>
+
+    <title id="title">Martijn Portfolio</title>
 </head>
-<body>
-    <diV class="icon-bar">
-        <a href="https://github.com/Martijn-Faber" class="github"><img src="./assets/github.svg"></img></a>
-        <a href="" class="instagram"><img src="./assets/instagram.svg"></img></a>
-        <a href="mailto:martijn@fabtronics.nl" class="mail"><img src="./assets/mail.svg"></img></a>
-        <a href="" class="dribble"><img src="./assets/dribbble.svg"></img></a>
-    </diV>
-    <!-- <div>
-        <img class="item-1" src="./assets/Ellipse 1.svg"></img>
-        <img class="item-2" src="./assets/Rectangle 1.svg"></img>
-        <img class="item-3" src="./assets/Polygon 1.svg"></img>
-        <img class="item-4" src="./assets/Ellipse 1.svg"></img>
-        <img class="item-5" src="./assets/Polygon 1.svg"></img>
-        <img class="item-6" src="./assets/Rectangle 1.svg"></img>
-        <img class="item-7" src="./assets/Ellipse 1.svg"></img>
-        <img class="item-8" src="./assets/Polygon 1.svg"></img>
+<body onload=onLoad()>
+    <div class="top-div"></div>
+        <div class="icon-bar">
+            <a href="https://github.com/Martijn-Faber" class="github socialItem"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+            <a href="" class="instagram socialItem"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="mailto:martijn@martijndev.me" class="mail socialItem"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+            <a href="" class="status socialItem"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span></a>
+        </diV>
+    <div class="cursor"></div>
+    <!-- <div class="splash">
+        <img class="splash-logo" src="./assets/logo/Mdev(light).svg">
     </div> -->
     <div class="container">
-        <div class="top"></div>
-        <!-- <div class="navigation">
-            <li><a class="nav-item" href="#home"></a>
-            <a class="nav-item" href="#about"></a>
-            <a class="nav-item" href="#projects"></a>
-            <a class="nav-item" href="#skillstools"></a>
-            <a class="nav-item" href="#contact"></a>
-        </div> -->
-        <nav class="navbar">
-            <ul class="menu">
-                <li><a href="#home" class="menu-itm"></a></li>
-                <li><a href="#about" class="menu-itm"></a></li>
-                <li><a href="#projects" class="menu-itm"></a></li>
-                <li><a href="#skillstools" class="menu-itm"></a></li>
-                <li><a href="#contact" class="menu-itm"></a></li>
-            </ul>
-        </nav>
         <section class="home" id="home">
-            <div class="top-div"></div>
-                <h1 class="intro-text"><code>&lt;h1&gt;</code>Hi<code>&lt;br&gt;</code><br>I'm<span> Martijn</span><code>&lt;br&gt;</code><br>A Dutch web developer<code>&lt;/h1&gt;</code></h1>
+            <h1 onmouseover="typ()" class="intro-text"><code>&lt;h1&gt;</code>Hi<code>&lt;br&gt;</code><br>I'm<span class="outlined-text"> Martijn</span><code>&lt;br&gt;</code><br>A Dutch <span id="typ">web developer</span><code>&lt;/h1&gt;</code></h1>
                 <div class="mouse-scroller">
-                    <a href="#about">
+                    <a href="#projects">
                         <div class="bottom-div">
                                 <div class="mousey">
                                 <div class="scroller"></div>
@@ -57,13 +49,6 @@
                 </div>
             </section>
         </div>
-
-
-        <section class="about" id="about">
-            <div>
-                <h1 class="header"><code>&lt;h1&gt;</code>About<code>&lt;\h1&gt;</code></h1>
-            </div>
-        </section>
 
 
         <section class="projects" id="projects">
@@ -119,13 +104,9 @@
                     </div>
             </div>
         </section>
-
-
-        <section class="contact" id="contact">
-            <div>
-                <h1 class="header"><code>&lt;h1&gt;</code>Contact<code>&lt;\h1&gt;</code></h1>
-            </div>
-        </section>
+        <footer>
+            <p class="copyright">&copy;2021 Martijn Faber</p>
+        </footer>
     </div>
 </body>
 </html>

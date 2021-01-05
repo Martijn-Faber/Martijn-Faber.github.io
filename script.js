@@ -1,30 +1,85 @@
-$(document).ready(function(){
 
-    $(window).scroll(function(){
-    // sticky navbar on scroll script
-        if(this.scrollY > 20){
-            $('.top').addClass("sticky");
-        }else{
-            $('.top').removeClass("sticky");
-        }
-    });
+
+window.addEventListener('mousemove', (e) => {
+  document.querySelector(".cursor").style.top =  e.pageY + 'px';
+  document.querySelector(".cursor").style.left =  e.pageX + 'px';
 });
 
 
+// const splash = document.querySelector('splash');
 
-$(document).ready(function(){
-    $("a").on('click', function(event) {
-      if (this.hash !== "") {
-        event.preventDefault();
-        var hash = this.hash;
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 800, function(){
-          window.location.hash = hash;
-        });
+// document.addEventListener('DOMContentLoaded', (e)=>{
+//   setTimeout(()=>{
+//     splash.classList.add('display-none')
+//   }, 2000);
+// })
+
+
+// $(document).ready(function(){
+
+//     $(window).scroll(function(){
+//     // sticky navbar on scroll script
+//         if(this.scrollY > 20){
+//             $('.top').addClass("sticky");
+//         }else{
+//             $('.top').removeClass("sticky");
+//         }
+//     });
+// });
+
+
+function onLoad() {
+  // console.log('onPageLoaded');
+  let socialLinks = document.querySelectorAll(".socialItem");
+  // console.log(socialLinks)
+  socialLinks.forEach(link => {
+    link.addEventListener('mouseover', () => {
+      document.querySelector(".cursor").classList.add('link-hover')
+      link.classList.add('link-hover-item');
+    });
+    link.addEventListener('mouseleave', () => {
+      document.querySelector(".cursor").classList.remove('link-hover')
+      link.classList.remove('link-hover-item');
+    });
+  });
+  
+  faviconTheme();
+  // type();
+
+}
+
+// let matcher = window.matchMedia('(prefers-color-scheme: dark)');
+// matcher.addListener(onUpdate);
+const mql = window.matchMedia("(prefers-color-scheme: dark)");
+
+mql.addEventListener("change", () => {
+  // console.log("Color theme changed!!!")
+  faviconTheme()
+});
+
+function faviconTheme() {
+  lightSchemeIcon = document.querySelector('link#light-scheme-icon');
+  darkSchemeIcon = document.querySelector('link#dark-scheme-icon');
+
+  if (mql.matches) {
+    lightSchemeIcon.remove();
+    document.head.append(darkSchemeIcon);
+  } else {
+    document.head.append(lightSchemeIcon);
+    darkSchemeIcon.remove();
+  }
+}
+
+
+$(document).scroll(function () {
+  $('section').each(function () {
+      if($(this).position().top <= $(document).scrollTop() && ($(this).position().top + $(this).outerHeight()) > $(document).scrollTop()) {
+        title = document.getElementById('title')
+        title.innerHTML = 'Martijn Portfolio | ' + $(this).attr('id');
       }
-    });
+  });
 });
+
 
 // var i = 0;
 // var txt = '<h1>Lorem ipsum dummy text blabla.<br>\n</h1>';
