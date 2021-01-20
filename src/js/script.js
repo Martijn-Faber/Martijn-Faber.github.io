@@ -83,6 +83,33 @@ $(document).ready(function(){
 
 
 
+function ToggleDarkMode() {
+  if (localStorage.getItem("dark_theme") === null) {
+      localStorage.setItem('dark_theme', 'true');
+  }
+  else {
+      localStorage.removeItem('dark_theme');
+  }
+  setTheme();
+}
+
+function setTheme() {
+  const themeIcon = document.getElementById('themeIcon')
+  const logo = document.getElementById('eckartlive-logo')
+
+  if (localStorage.getItem("dark_theme") === null) {
+      document.body.classList.remove("dark-mode");
+      themeIcon.src = "/src/assets/dark_mode-black-18dp.svg"
+      logo.src = "/src/assets/logo/EckartLive (dark).svg"
+  } else {
+      document.body.classList.add("dark-mode");
+      themeIcon.src = "/src/assets/light_mode-white-18dp.svg"
+      logo.src = "/src/assets/logo/EckartLive (light).svg"
+  }
+}
+
+
+
 
 
 function type() {

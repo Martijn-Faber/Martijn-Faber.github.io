@@ -288,6 +288,10 @@ code {
     font-size: 30px;
 }
 
+.project_paragraph {
+    font-weight: 100;
+}
+
 .project_link {
     margin-top: 20px;
 }

@@ -49,7 +49,36 @@
             <a href="#projects"><div class="scrollitem"></div></a>
             <a href="#skillstools"><div class="scrollitem"></div></a>
         </div>
+        <img onclick="ToggleDarkMode()" class="theme-icon" id="themeIcon">
 
+    <noscript>
+        <style type="text/css">
+            .container {
+                display:none;
+            }
+
+            .splash {
+                display: none;
+            }
+
+            .nojstext {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                text-align: center;
+            }
+
+            .scroll-bar {
+                display: none;
+            }
+
+            .cursor {
+                display: none;
+            }   
+        </style>
+        <h1 class="nojstext">You don't have Javscript enabled,<br> please enabled it.</h1>
+    </noscript>
     <div class="container">
         <section class="home" id="home">
             <h1 class="intro-text"><code>&lt;h1&gt;</code>Hi<code>&lt;br&gt;</code><br>I'm<span class="outlined-text"> Martijn</span><code>&lt;br&gt;</code><br>A Dutch<span id="type"></span><code>&lt;/h1&gt;</code></h1>
@@ -94,7 +123,7 @@
                         </div>
                         <div class="project_link">
                             <a href="#" id="project2_github">Github</a>
-                            <a href="#" id="project2_github">Live site</a>
+                            <a href="#" id="project2_site">Live site</a>
                         </div>
                     </div>
                  </div>
