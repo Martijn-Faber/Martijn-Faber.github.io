@@ -1,6 +1,7 @@
 {
     "short_name": "Martijn Portfolio",
     "name": "Martijn Portfolio",
+    "description": "Martijns Portfolio, young web developer / designer",
     "icons": [
     {
     "src":"./assets/logo/Mdev(dark).svg",
@@ -8,8 +9,8 @@
     "type": "image/png"
     }
     ],
-    "start_url": "/?utm_source=homescreen",
-    "background_color": "#e05a47",
-    "theme_color": "#e05a47",
+    "start_url": "",
+    "background_color": "#0d1117",
+    "theme_color": "#fff",
     "display": "standalone"
   }

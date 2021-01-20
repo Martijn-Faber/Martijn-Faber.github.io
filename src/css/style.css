@@ -1,4 +1,13 @@
+/* ////////////////////////////////////////////
+            Google font import
+   ////////////////////////////////////////////*/
+
+/* main font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
+/* terminal / code looking font */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+/* handwritten font */
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
 
 /* ////////////////////////////////////////////
                 Default styling
@@ -12,7 +21,14 @@
 }
 
 body {
-    background-color: #0d1117;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: rgb(0,8,17);
+    background: -moz-linear-gradient(125deg, rgba(0,8,17,1) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    background: -webkit-linear-gradient(125deg, rgba(0,8,17,1) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    background: linear-gradient(125deg, rgba(0,8,17,1) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000811",endColorstr="#002142",GradientType=1); 
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
@@ -29,7 +45,8 @@ html {
 
 code {
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: 'Source Code Pro', monospace;
 }
 
 .top {
@@ -67,29 +84,8 @@ code {
                 scrollbar styling
    ////////////////////////////////////////////*/
 
-::-webkit-resizer {
-    display: none;
-}
-
 ::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #161B22;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    border-color: #fff;
-    /* box-shadow: 0 -100vh 0 100vh #fff; */
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    display: none;
 }
 
 /* ////////////////////////////////////////////
@@ -97,12 +93,12 @@ code {
    ////////////////////////////////////////////*/
 
 .cursor {
+    position: fixed;
     width: 40px;
     height: 40px;
     border: 2px solid #fff;
     border-radius: 50%;
-    position: absolute;
-    z-index: -100;
+    z-index: -1;
     transform: translate(-50%, -50%);
     transition: all 0.3s ease;
     transition-property: background, transform;
@@ -110,7 +106,6 @@ code {
 }
 
 .link-hover {
-    z-index: -100;
     transform: scale(1.5);
     background-color: #fff;
 }
@@ -119,6 +114,30 @@ code {
             Splash screen styling
    ////////////////////////////////////////////*/
 
+.splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0,8,17);
+    background: -moz-linear-gradient(125deg, rgba(0,8,17,1) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    background: -webkit-linear-gradient(125deg, rgba(0,8,17,1) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    background: linear-gradient(125deg, rgba(0,8,17,1) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000811",endColorstr="#002142",GradientType=1);
+    z-index: 2;
+    cursor: none;   
+}
+
+.splash-logo {
+    width: 250px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
 
 
 /* ////////////////////////////////////////////
@@ -143,9 +162,6 @@ code {
     transform: translateY(-50%);
 }
 
-.socialItem {
-}
-
 .github, .instagram, .mail, .status {
     display: block;
     text-align: center;
@@ -156,6 +172,33 @@ code {
 
 .socialItem:hover {
     stroke: #0d1117;
+}
+
+/* ////////////////////////////////////////////
+                scroll styling
+   ////////////////////////////////////////////*/
+
+.scroll-bar {
+    position: fixed;
+    right: 25px;
+    bottom: 45%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.scrollitem {
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    /* background-color: #fff; */
+    border: 3px solid #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.active {
+    background-color: #fff;
 }
 
 /* ////////////////////////////////////////////
@@ -210,12 +253,52 @@ code {
     animation-iteration-count: infinite;
 }
 
+.handwritten_text {
+    font-family: 'Kalam', cursive;
+    fill: #fff;
+}
+
+.handwritten {
+    position: absolute;
+    bottom: 80px;
+    right: 33%;
+}
+
 /* ////////////////////////////////////////////
                 project page styling
    ////////////////////////////////////////////*/
 
 .projects {
     height: 100vh;
+}
+
+.column_left {
+    float: left;
+    width: 120px;
+    padding: 5px;
+}
+
+.column_right {
+    float: right;
+    width: 120px;
+    padding: 5px;
+}
+
+.project_title {
+    font-size: 30px;
+}
+
+.project_link {
+    margin-top: 20px;
+}
+
+.project_link a {
+    text-decoration: none;
+    color: #161B22;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 5px 8px 5px 8px;
+    font-weight: 700;
 }
 
 /* ////////////////////////////////////////////
@@ -233,15 +316,15 @@ code {
 }
 
 .row {
-    background-color: #161B22;
+    background: rgb(0,8,17);
+    background: -moz-linear-gradient(125deg, rgba(0,8,17,0) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    background: -webkit-linear-gradient(125deg, rgba(0,8,17,0) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    background: linear-gradient(125deg, rgba(0,8,17,0) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000811",endColorstr="#002142",GradientType=1);
     padding: 65px;
     border-radius: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.left-div {
-    width: 33vw;
 }
 
 .row::after {
@@ -257,6 +340,7 @@ code {
 
 .type {
     text-align: center;
+    background-color: transparent;
 }
 
 /* ////////////////////////////////////////////
@@ -329,25 +413,8 @@ code {
    ////////////////////////////////////////////*/
 
 @media only screen and (max-width:480px) {
-    .intro-text {
-        font-size: 45px;
-    }
-
-    .header {
-        font-size: 45px;
-    }
-
-    .github, .instagram, .mail, .dribble {
+    .container {
         display: none;
-    }
-    
-    .cursor {
-        display: none;
-    }
-
-
-    code {
-        font-size: 18px;
     }
 }
 
@@ -358,3 +425,36 @@ code {
 @media only screen and (max-width:1200px) {
 
 }
+
+
+
+
+
+
+/* @import 'https://fonts.googleapis.com/css?family=Roboto';
+html, body {
+	background-color: #000;
+}
+h2, a, p {
+	color: #fff;
+	font-family: Roboto;
+	text-decoration: none;
+}
+p>a {
+	color: #fd084a;
+} */
+.blink {
+  animation: blink 0.5s infinite;
+}
+@keyframes blink{
+  to { opacity: .0; }
+}
+/* .flex {
+	display: flex;
+}
+.header-sub-title {
+  color: #fff;
+  font-family: "Courier";
+  font-size: 20px;
+  padding: 0.1em;
+} */

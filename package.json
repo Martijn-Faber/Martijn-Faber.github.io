@@ -1,0 +1,51 @@
+{
+  "name": "martijnportfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Martijn Faber",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Martijn-Faber/Martijn-Faber.github.io.git"
+  },
+  "keywords": [
+    "web",
+    "developer",
+    "designer",
+    "web",
+    "designer",
+    "developer",
+    "programmer",
+    "coder",
+    "html",
+    "css3",
+    "css",
+    "javascript",
+    "js",
+    "scss",
+    "nodejs",
+    "mongodb",
+    "github",
+    "git",
+    "vscode",
+    "visual",
+    "studio",
+    "code",
+    "tap",
+    "giftit",
+    "martijn",
+    "Martijn",
+    "faber",
+    "frontend"
+  ],
+  "author": {
+    "name": "Martijn Faber",
+    "url": "http://martijndev.me"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Martijn-Faber/Martijn-Faber.github.io/issues"
+  },
+  "homepage": "https://martijndev.me"
+}
