@@ -133,7 +133,7 @@ function data() {
   project1_title.textContent  = "GiftIt"
   project1_paragraph.textContent = "GiftIt it the way to say merry christmas online to friends or family. Check it out and share it!"
   project1_github.href = "https://github.com/Martijn-Faber/GiftIt"
-  project1_site.href = "https://martijndev.me/GiftIt/nl/christmas.html"
+  project1_site.href = "https://martijndev.me/GiftIt/nl/christmas.html?name=Martijn"
 
   project2_image.src= "./src/assets/projects/Tap_logo.svg"
   project2_title.textContent = "Tap"
