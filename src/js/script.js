@@ -79,44 +79,38 @@ $(document).ready(function(){
   $(window).scroll(function(){ 
       $('.mouse-scroller').css("opacity", 1- $(window).scrollTop() / 1000) 
   }) 
-}) 
-
-
-
-function ToggleDarkMode() {
-  if (localStorage.getItem("dark_theme") === null) {
-      localStorage.setItem('dark_theme', 'true');
-  }
-  else {
-      localStorage.removeItem('dark_theme');
-  }
-  setTheme();
-}
-
-function setTheme() {
-  const themeIcon = document.getElementById('themeIcon')
-  const logo = document.getElementById('eckartlive-logo')
-
-  if (localStorage.getItem("dark_theme") === null) {
-      document.body.classList.remove("dark-mode");
-      themeIcon.src = "/src/assets/dark_mode-black-18dp.svg"
-      logo.src = "/src/assets/logo/EckartLive (dark).svg"
-  } else {
-      document.body.classList.add("dark-mode");
-      themeIcon.src = "/src/assets/light_mode-white-18dp.svg"
-      logo.src = "/src/assets/logo/EckartLive (light).svg"
-  }
-}
-
-
-
+})
 
 
 function type() {
   document.getElementById("type").innerHTML = " " + "Web Developer";
 }
 
+// const projects = [
+//   {
+//       name: "GiftIt",
+//       description: "GiftIt it the way to say merry christmas online to friends or family. Check it out and share it!",
+//       image: "./src/assets/html5-plain 1.svg",
+//       github: "https://github.com/Martijn-Faber/GiftIt",
+//       site: "https://martijndev.me/GiftIt/nl/christmas.html?name=Martijn"
+//   },
+//   {
+//       name: "Tap",
+//       description: "Tap is the way to easily share your socials with a Tap NFC tag. Want to help? <a href='mailto:tap@martijndev.me?cc=martijn@martijndev.me&subject=I want to help with Tap!' class='link'>Contact me</a>",
+//       image: "./src/assets/projects/Tap_logo.svg",
+//       github: "https://github.com/Martijn-Faber/Tap",
+//       site: "#"
+//   },
+// ];
+
+
+
 function data() {
+
+  // const random = projects.length;
+  // const randomKnuffel = projects[random]
+  // console.log(randomKnuffel);
+
   const project1_image = document.getElementById('project1_image')
   const project1_title = document.getElementById('project1_title')
   const project1_paragraph = document.getElementById('project1_paragraph')

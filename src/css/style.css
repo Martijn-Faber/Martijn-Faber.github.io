@@ -128,7 +128,7 @@ code {
     background: linear-gradient(125deg, rgba(0,8,17,1) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000811",endColorstr="#002142",GradientType=1);
     z-index: 2;
-    cursor: none;   
+    cursor: none;
 }
 
 .splash-logo {
@@ -251,17 +251,6 @@ code {
     animation-duration: 2.2s;
     animation-timing-function: cubic-bezier(.15, .41, .69, .94);
     animation-iteration-count: infinite;
-}
-
-.handwritten_text {
-    font-family: 'Kalam', cursive;
-    fill: #fff;
-}
-
-.handwritten {
-    position: absolute;
-    bottom: 80px;
-    right: 33%;
 }
 
 /* ////////////////////////////////////////////
